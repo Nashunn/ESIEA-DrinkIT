@@ -10,5 +10,5 @@ import retrofit2.http.Query;
 public interface CocktailAPI {
 
     @GET("search.php?/")
-    Call<List<Drink>> loadChanges(@Query("q") String status);
+    Call<List<Drink>> loadDrinks(@Query("s") String name);
 }

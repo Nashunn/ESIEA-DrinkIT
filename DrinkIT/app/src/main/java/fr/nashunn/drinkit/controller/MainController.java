@@ -1,5 +1,7 @@
 package fr.nashunn.drinkit.controller;
 
+import android.widget.Toast;
+
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -27,17 +29,20 @@ public class MainController implements Callback<List<Drink>> {
 
         CocktailAPI cocktailAPI = retrofit.create(CocktailAPI.class);
 
-        Call<List<Drink>> call = cocktailAPI.loadChanges("status:open");
+        Call<List<Drink>> call = cocktailAPI.loadDrinks("name:margarita");
+
         call.enqueue(this);
 
+        System.out.println("DEBUG NICO : START CONTROLLER");
     }
 
     @Override
     public void onResponse(Call<List<Drink>> call, Response<List<Drink>> response) {
+        System.out.println("DEBUG NICO : On response begin");
         if(response.isSuccessful()) {
             List<Drink> DrinksList = response.body();
             for (Drink drink : DrinksList) {
-                System.out.println(drink.getName());
+                System.out.println("DEBUG NICO : drink :"+drink.getName());
             }
         } else {
             System.out.println(response.errorBody());
@@ -46,6 +51,8 @@ public class MainController implements Callback<List<Drink>> {
 
     @Override
     public void onFailure(Call<List<Drink>> call, Throwable t) {
+        System.out.println("DEBUG NICO : FAIL CALL");
+        System.out.println("No result");
         t.printStackTrace();
     }
 }
