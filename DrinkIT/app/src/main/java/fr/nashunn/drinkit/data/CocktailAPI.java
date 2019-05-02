@@ -1,4 +1,4 @@
-package fr.nashunn.drinkit.controller;
+package fr.nashunn.drinkit.data;
 
 import java.util.List;
 
@@ -10,5 +10,5 @@ import retrofit2.http.Query;
 public interface CocktailAPI {
 
     @GET("search.php?/")
-    Call<List<Drink>> loadDrinks(@Query("s") String name);
+    Call<ResponseAPI> loadDrinks(@Query("s") String name);
 }

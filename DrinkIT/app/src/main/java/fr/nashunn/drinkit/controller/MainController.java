@@ -1,12 +1,12 @@
 package fr.nashunn.drinkit.controller;
 
-import android.widget.Toast;
-
 import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import fr.nashunn.drinkit.data.CocktailAPI;
+import fr.nashunn.drinkit.data.ResponseAPI;
 import fr.nashunn.drinkit.model.Drink;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -14,7 +14,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainController implements Callback<List<Drink>> {
+public class MainController implements Callback<ResponseAPI> {
     static final String BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
 
     public void start() {
@@ -29,19 +29,19 @@ public class MainController implements Callback<List<Drink>> {
 
         CocktailAPI cocktailAPI = retrofit.create(CocktailAPI.class);
 
-        Call<List<Drink>> call = cocktailAPI.loadDrinks("name:margarita");
+        Call<ResponseAPI> call = cocktailAPI.loadDrinks("name:margarita");
 
         call.enqueue(this);
 
         System.out.println("DEBUG NICO : START CONTROLLER");
     }
 
-    @Override
-    public void onResponse(Call<List<Drink>> call, Response<List<Drink>> response) {
-        System.out.println("DEBUG NICO : On response begin");
+    public void onResponse(Call<ResponseAPI> call, Response<ResponseAPI> response) {
+        ResponseAPI responseAPI = response.body();
+
         if(response.isSuccessful()) {
-            List<Drink> DrinksList = response.body();
-            for (Drink drink : DrinksList) {
+            List<Drink> drinksList = responseAPI.getDatalist();
+            for (Drink drink : drinksList) {
                 System.out.println("DEBUG NICO : drink :"+drink.getName());
             }
         } else {
@@ -49,8 +49,7 @@ public class MainController implements Callback<List<Drink>> {
         }
     }
 
-    @Override
-    public void onFailure(Call<List<Drink>> call, Throwable t) {
+    public void onFailure(Call<ResponseAPI> call, Throwable t) {
         System.out.println("DEBUG NICO : FAIL CALL");
         System.out.println("No result");
         t.printStackTrace();
