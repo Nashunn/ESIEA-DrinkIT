@@ -1,8 +1,5 @@
 package fr.nashunn.drinkit.data;
 
-import com.google.gson.annotations.SerializedName;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import fr.nashunn.drinkit.model.Drink;

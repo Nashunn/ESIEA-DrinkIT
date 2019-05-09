@@ -8,11 +8,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SingletonAPI {
     static final String BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
-    private static CocktailAPI instance;
+    private static CocktailAPI instanceAPI;
 
     public static CocktailAPI getInstance() {
-        // If instance doesn't exist, create it before using it
-        if(instance == null){
+        // If instanceAPI doesn't exist, create it before using it
+        if(instanceAPI == null){
             Gson gson = new GsonBuilder()
                     .setLenient()
                     .create();
@@ -21,10 +21,10 @@ public class SingletonAPI {
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
-            // Create the instance of CocktailAPI
-            instance = retrofit.create(CocktailAPI.class);
+            // Create the instanceAPI of CocktailAPI
+            instanceAPI = retrofit.create(CocktailAPI.class);
         }
-        //Set instance of api
-        return instance;
+        //Set instanceAPI of api
+        return instanceAPI;
     }
 }

@@ -17,10 +17,10 @@ public class Drink {
     @SerializedName("strInstructions")
     private String instructions;
     // todo : private Image illustration;
-    @SerializedName("strIngredient1")
-    private ArrayList ingredients; // todo : get list of ingredients
-    @SerializedName("strMeasure1")
-    private ArrayList measures; // todo : get list of measures
+    //@SerializedName("strIngredient1")
+    //private ArrayList ingredients; // todo : get list of ingredients
+    //@SerializedName("strMeasure1")
+    //private ArrayList measures; // todo : get list of measures
 
     public Drink() {
     }
@@ -67,7 +67,7 @@ public class Drink {
         this.instructions = instructions;
     }
 
-    public ArrayList getIngredients() {
+    /*public ArrayList getIngredients() {
         return ingredients;
     }
 
@@ -81,5 +81,5 @@ public class Drink {
 
     public void setMeasures(ArrayList measures) {
         this.measures = measures;
-    }
+    }*/
 }

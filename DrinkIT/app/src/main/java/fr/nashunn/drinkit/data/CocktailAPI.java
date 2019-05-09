@@ -8,7 +8,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface CocktailAPI {
-
     @GET("search.php?/")
     Call<ResponseAPI> loadDrinks(@Query("s") String name);
 }
