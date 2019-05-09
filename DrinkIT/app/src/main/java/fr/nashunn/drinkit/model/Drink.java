@@ -1,17 +1,26 @@
 package fr.nashunn.drinkit.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Drink {
+    @SerializedName("strDrink")
     private String name;
+    @SerializedName("strCategory")
     private String category;
+    @SerializedName("strAlcoholic")
     private String isAlcoholic;
+    @SerializedName("strGlass")
     private String glassType;
+    @SerializedName("strInstructions")
     private String instructions;
-    // private Image illustration;
-    private ArrayList ingredients;
-    private ArrayList measures;
+    // todo : private Image illustration;
+    @SerializedName("strIngredient1")
+    private ArrayList ingredients; // todo : get list of ingredients
+    @SerializedName("strMeasure1")
+    private ArrayList measures; // todo : get list of measures
 
     public Drink() {
     }
