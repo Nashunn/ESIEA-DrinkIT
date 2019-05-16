@@ -9,7 +9,7 @@ public class Drink {
     private String isAlcoholic;
     private String glassType;
     private String instructions;
-    // private Image illustration;
+    // private Image illustration; // using Picasso lib
     private ArrayList ingredients;
     private ArrayList measures;
 
