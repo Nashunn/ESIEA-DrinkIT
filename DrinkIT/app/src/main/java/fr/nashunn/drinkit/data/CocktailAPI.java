@@ -10,4 +10,7 @@ import retrofit2.http.Query;
 public interface CocktailAPI {
     @GET("search.php?/")
     Call<ResponseAPI> loadDrinks(@Query("s") String name);
+
+    @GET("random.php")
+    Call<ResponseAPI> loadRandomDrinks();
 }

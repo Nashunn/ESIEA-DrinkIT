@@ -8,15 +8,16 @@ import java.util.List;
 import fr.nashunn.drinkit.data.CocktailAPI;
 import fr.nashunn.drinkit.data.ResponseAPI;
 import fr.nashunn.drinkit.model.Drink;
+import fr.nashunn.drinkit.view.MainActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainControllerAPI implements Callback<ResponseAPI> {
-    private Activity activity;
+    private MainActivity activity;
     private CocktailAPI api;
 
-    public MainControllerAPI(Activity activity, CocktailAPI api) {
+    public MainControllerAPI(MainActivity activity, CocktailAPI api) {
         this.activity = activity;
         this.api = api;
     }
@@ -28,9 +29,17 @@ public class MainControllerAPI implements Callback<ResponseAPI> {
 
     public void onResponse(Call<ResponseAPI> call, Response<ResponseAPI> response) {
         ResponseAPI responseAPI = response.body(); // Deserialize response body into objects
+        System.out.print("debugggg");
 
         if(response.isSuccessful()) {
             List<Drink> drinks = responseAPI.getDrinks();
+            if(response.isSuccessful()) {
+                // Send data to view
+                activity.updateCocktailList(drinks);
+            }
+            else {
+                System.out.println(response.errorBody());
+            }
         } else {
             Toast.makeText(activity.getBaseContext(), "ERROR : API did not respond successfully", Toast.LENGTH_LONG).show();
             System.out.println(response.errorBody());

@@ -16,7 +16,9 @@ public class Drink {
     private String glassType;
     @SerializedName("strInstructions")
     private String instructions;
-    // todo : private Image illustration;
+    @SerializedName("strDrinkThumb")
+    private String icon;
+
     //@SerializedName("strIngredient1")
     //private ArrayList ingredients; // todo : get list of ingredients
     //@SerializedName("strMeasure1")
@@ -65,6 +67,14 @@ public class Drink {
 
     public void setInstructions(String instructions) {
         this.instructions = instructions;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     /*public ArrayList getIngredients() {
