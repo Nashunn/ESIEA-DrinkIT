@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemLayout"
     android:layout_width="fill_parent"
@@ -33,21 +34,24 @@
         android:text="Unknown"
         android:textSize="16sp" />
 
+    <ImageView
+        android:id="@+id/iv_alcoholIndicator"
+        android:layout_width="10dp"
+        android:layout_height="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_name"
+        android:layout_marginBottom="15dp"
+        android:tint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_round_shape" />
+
     <TextView
-        android:id="@+id/description"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignWithParentIfMissing="true"
-        android:layout_marginEnd="35dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginTop="35dp"
-        android:layout_toRightOf="@id/cocktailIcon"
-        android:gravity="center_vertical"
+        android:id="@+id/tv_isAlcoholic"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/iv_alcoholIndicator"
         android:text="Description"
-        android:textSize="16sp" />
+        android:layout_marginStart="8dp"
+        android:textSize="12sp" />
 
 </RelativeLayout>
