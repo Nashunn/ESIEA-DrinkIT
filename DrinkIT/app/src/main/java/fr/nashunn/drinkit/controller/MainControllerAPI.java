@@ -1,8 +1,13 @@
 package fr.nashunn.drinkit.controller;
 
+import android.support.annotation.NonNull;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import fr.nashunn.drinkit.data.CocktailAPI;
 import fr.nashunn.drinkit.data.ResponseAPI;
@@ -32,13 +37,12 @@ public class MainControllerAPI {
 
                     if(response.isSuccessful()) {
                         List<Drink> drinks = responseAPI.getDrinks();
-                        if(response.isSuccessful()) {
-                            // Send data to view
-                            activity.updateCocktailList(drinks);
+                        //if drinks is null, create a list
+                        if(drinks == null) {
+                            drinks = new ArrayList<Drink>();
                         }
-                        else {
-                            System.out.println(response.errorBody());
-                        }
+                        // send data to cocktail list
+                        activity.updateCocktailList(drinks);
                     } else {
                         Toast.makeText(activity.getBaseContext(), "ERROR : API did not respond successfully", Toast.LENGTH_LONG).show();
                         System.out.println(response.errorBody());
