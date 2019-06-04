@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.CocktailDescriptionActivity"></activity>
+        <activity android:name=".view.CocktailDescriptionActivity" />
+        <activity android:name=".view.FavoritesActivity" />
     </application>
 
 </manifest>

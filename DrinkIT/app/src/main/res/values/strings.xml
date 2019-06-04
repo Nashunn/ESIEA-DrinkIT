@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DrinkIT</string>
+    <string name="pref_favorites">fr.nashunn.drinkit.favorites</string>
 </resources>

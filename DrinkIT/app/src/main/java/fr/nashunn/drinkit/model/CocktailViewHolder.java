@@ -2,12 +2,10 @@ package fr.nashunn.drinkit.model;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import fr.nashunn.drinkit.R;
 import fr.nashunn.drinkit.view.CocktailDescriptionActivity;
