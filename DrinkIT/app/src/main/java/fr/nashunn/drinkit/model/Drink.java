@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Drink implements Serializable {
+    @SerializedName("idDrink")
+    private String id;
     @SerializedName("strDrink")
     private String name;
     @SerializedName("strCategory")
@@ -83,6 +85,14 @@ public class Drink implements Serializable {
     private String measure15;
 
     public Drink() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setName(String name) {

@@ -33,6 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_descName"
         app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
         app:srcCompat="@android:drawable/btn_star" />
 
     <ImageView
