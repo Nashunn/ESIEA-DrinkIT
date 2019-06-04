@@ -9,7 +9,7 @@
     tools:context=".view.MainActivity">
 
     <EditText
-        android:id="@+id/et_reseach"
+        android:id="@+id/et_research"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_reseach"
+        app:layout_constraintTop_toBottomOf="@+id/et_research"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
