@@ -4,11 +4,14 @@
 ## Introduction
 
 This application was made as part of our school work at ESIEA. 
+
 The purpose was to create an application in the language of our choice with an **MVC** pattern.
 This application is coded in JAVA for Android smartphone and use an API called "TheCocktailDB".
 
 This application will display a cocktail list based on the name that the user is looking for.
+
 It will look for the information by querying the API, and it is possible to click on a cocktail from the list to get more information about its preparation.
+
 A list of favorite cocktails is also available and is also accessible without an internet connection.
 
 ## Completed Instructions
