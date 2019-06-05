@@ -28,7 +28,6 @@ A list of favorite cocktails is also available and is also accessible without an
 
 ## Demonstration
 
-[Screens and explanation]
 - Splash screen of the application :
 
 ![1](https://i.ibb.co/5cV8G25/Screenshot-20190605-230813.jpg)
