@@ -55,11 +55,15 @@ public class CocktailListAdapter extends RecyclerView.Adapter<CocktailViewHolder
 
         Picasso.get().load(currentDrink.getIcon()).into(holder.iv_image);
         holder.tv_name.setText(currentDrink.getName());
-        holder.tv_isAlcoholic.setText(currentDrink.getIsAlcoholic());
+        holder.tv_isAlcoholic.setText(currentDrink.getIsAlcoholic()!=null?currentDrink.getIsAlcoholic():"Unknown");
 
         // If drink is not alcoholic, change the color
-        if(!currentDrink.getIsAlcoholic().equals("Alcoholic"))
-            ImageViewCompat.setImageTintList(holder.iv_alcoholIndicator, ColorStateList.valueOf(Color.argb(255, 50, 200, 100)));
+        if(currentDrink.getIsAlcoholic() != null) {
+            if (currentDrink.getIsAlcoholic().equals("Alcoholic"))
+                ImageViewCompat.setImageTintList(holder.iv_alcoholIndicator, ColorStateList.valueOf(Color.argb(255, 63, 140, 181)));
+            else
+                ImageViewCompat.setImageTintList(holder.iv_alcoholIndicator, ColorStateList.valueOf(Color.argb(255, 50, 200, 100)));
+        }
     }
 
 }

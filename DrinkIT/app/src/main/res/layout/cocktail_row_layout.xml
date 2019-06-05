@@ -41,7 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/tv_name"
         android:layout_marginBottom="15dp"
-        android:tint="@color/colorPrimary"
+        android:tint="@color/ic_launcher_cocktailç_background"
         app:srcCompat="@drawable/ic_round_shape" />
 
     <TextView
