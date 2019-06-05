@@ -24,10 +24,35 @@ A list of favorite cocktails is also available and is also accessible without an
 - Additionnal features :
   - Favorites management
   - Search bar
+  - Splash screen
 
 ## Demonstration
 
 [Screens and explanation]
+- Splash screen of the application :
+
+![1](https://i.ibb.co/5cV8G25/Screenshot-20190605-230813.jpg)
+
+- First screen with list of cocktail :
+
+![2](https://i.ibb.co/qY7YvrL/Screenshot-20190605-122730.jpg)
+
+- First screen after a research : 
+
+![3](https://i.ibb.co/QKdV5RP/Screenshot-20190605-122831.jpg)
+
+- Detailed screen of a cocktail :
+  - Not saved as favorite :
+  
+  ![4](https://i.ibb.co/bKSwYyd/Screenshot-20190605-122910.jpg)
+
+  - Saved as favorite :
+  
+  ![5](https://i.ibb.co/sqds31L/Screenshot-20190605-123001.jpg)
+  
+- List of favorites :
+
+![6](https://i.ibb.co/rZN36Zs/Screenshot-20190605-123019.jpg)
 
 ##  Tools
 
