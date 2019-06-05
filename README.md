@@ -21,7 +21,9 @@ A list of favorite cocktails is also available and is also accessible without an
 - WebService call to an API Rest.
 - Cache data storage.
 - Animation (with Favorites screen)
-- Added functionnalities : [To complete]
+- Additionnal features :
+  - Favorites management
+  - Search bar
 
 ## Demonstration
 
