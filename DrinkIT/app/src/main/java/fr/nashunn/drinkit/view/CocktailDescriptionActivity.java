@@ -119,12 +119,12 @@ public class CocktailDescriptionActivity extends AppCompatActivity{
                 e.printStackTrace();
             }
 
-            if(ingredientStr.equals("")) {
+            if(ingredientStr == null || ingredientStr.equals("")) {
                 result = result.substring(0, result.length() - 3);
                 isFinished = true;
             }
             else
-                if(measureStr.equals(""))
+                if(measureStr == null || measureStr.equals(""))
                     result += "- "+ingredientStr+"\r\n";
                 else
                     result += "- "+ingredientStr+" : "+measureStr+"\r\n";
